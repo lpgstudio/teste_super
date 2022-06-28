@@ -131,3 +131,50 @@ section.section-two{
 .right-content p{
     color: #fff;
 }
+
+.botao-box{
+    display: flex;
+    flex-direction: column;
+}
+.botao-comprar{
+    border: 2px solid #FF5E00;
+    color: #FF5E00;
+    font-size: 13px;
+    max-width: 268px;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+.botao-whats{
+    border: 2px solid #25D366;
+    color: #25D366;
+    font-size: 13px;
+    max-width: 268px;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.botao-video{
+    border: 2px solid #25D366;
+    color: #25D366;
+    font-size: 13px;
+    max-width: 268px;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.botao-comprar img,
+.botao-whats img,
+.botao-video img{
+    margin-right: 10px;
+}
