@@ -178,3 +178,96 @@ section.section-two{
 .botao-video img{
     margin-right: 10px;
 }
+
+
+section.blog{
+    width: 100%;
+}
+.card-blog-container{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+}
+.card-blog{
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    min-height: 450px;
+    flex: 1 1 450px;
+    margin: 0 10px;
+}
+
+.card-blog .blog-img{
+    position: relative;
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+}
+.card-blog .blog-img a{
+    position: relative;
+    width: 100%;
+    height: 240px;
+}
+.card-blog .blog-img a img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.card-blog .blog-img:hover a img{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.card-blog .blog-content{
+    width: 100%;
+    padding: 20px 30px;
+}
+
+.card-blog .blog-content .blog-title a{
+    color: #9696A0;
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+.card-blog .blog-content .blog-text{
+    color: #9696A0;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 25px;
+    margin: 10px 0;
+}
+
+.card-blog .blog-content .blog-readmore{
+    position: relative;
+    color: #FF5E00;
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    line-height: 25px;
+    text-decoration: none;
+}
+
+.card-blog .blog-content .blog-readmore::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #FF5E00;
+    transition: 0.5s;
+}
+
+.card-blog .blog-content .blog-readmore:hover::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    width: 0%;
+    height: 1px;
+    background-color: #FF5E00;
+    transition: 0.5s;
+}
