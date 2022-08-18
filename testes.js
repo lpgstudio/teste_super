@@ -14,3 +14,34 @@ function tratarEnd(end){
     const str2 = arr.join(" ");
     return(str2);
 }
+
+// Carregar mais posts 
+var load_flag = 9;
+var urlparams = $.urlParam('s');
+
+jQuery(document).ready(function(){
+  jQuery('#loadMore').click(function(){
+    load_flag += 9;
+
+    $.ajax({
+      type: 'POST',
+      //https://ecliente2.com.br/producao/acfarma
+      url: '<?= get_site_url(); ?>/wp-content/themes/acfarma/load-posts-blog.php',
+      async: true,
+      data: {
+        'start': load_flag,
+        's': urlparams
+      },
+      success: function(response) {
+        document.getElementById('loadmoreposts').innerHTML += response;
+        ScrollReveal().reveal('.postcounter', { 
+          duration: 1500,
+          origin: 'bottom',
+          opacity: 0,
+          distance: '100px' });
+          ScrollReveal().reveal('.postcounter', { interval: 250, delay: 0 });
+      }
+    });          
+    return false;
+  });
+});
