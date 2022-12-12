@@ -291,7 +291,7 @@ section.blog{
     height: 50px;
     font-size: 20px;
     color: var(--qode-main-color);
-    background-image: url(assets/img/icons/Icon-whatsapp.svg);
+    background-image: url(icon-whatsapp.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 80%;
