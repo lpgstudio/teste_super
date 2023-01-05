@@ -63,7 +63,7 @@
 </section>
 
  Botão Sofá -->
-<div class="btn-whatsapp">
+<!-- <div class="btn-whatsapp">
     <span class="whatsapp-text" onclick="closeWhts()">Atendimento <b>personalizado</b> <br>com nossos consultores</span>
     <span class="icone-whatsapp" onclick="linksWhats()"></span>
     <div class="links-container">
@@ -74,8 +74,39 @@
             <a href="https://api.whatsapp.com/send?phone=5519997335946" target="_blank" class="link-whats">Campinas - Taquaral</a>
         </div>
     </div>
+</div> -->
+
+<!-- Cadastro / Primeiro acesso -->
+<div class="form" id="contact-form">
+    <form method="post" action="https://www.mileniumformaturas.net.br/sistema/alu/cadastro_aluno_passo_novo.php">
+
+        <input name="codturma" placeholder="Código da sua turma" type="text" id="codturma" value="" size="10" maxlength="10" class="campos">
+        <button type="submit" value="Enviar">
+            Enviar
+        </button>
+    
+    </form> 
 </div>
 
+<!-- Fazer login / Acessar -->
+<div class="form" id="contact-form">
+    <form id="form1" name="form1" method="post" action="https://www.mileniumformaturas.net.br/sistema/alu/logadm.php">
+
+        <div class="input-content">
+            <label for="login">Login <abbr>*</abbr></label>
+            <input name="login" placeholder="Login" type="text" id="login" size="20" class="campos" maxlength="50">
+        </div>
+        <div class="input-content">
+            <label for="senha">Senha <abbr>*</abbr></label>
+            <input name="senha" placeholder="Senha" type="password" id="senha" size="20" class="campos" maxlength="50">
+        </div>
+
+        <button type="submit" value="Entrar">
+            Acessar
+        </button>
+
+    </form>
+</div>
 
 </body>
 
